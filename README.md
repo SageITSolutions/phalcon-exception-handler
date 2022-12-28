@@ -1,3 +1,7 @@
+[![Latest Version](https://img.shields.io/github/release/SageITSolutions/phalcon-exception-handler.svg?style=flat-square)](https://github.com/SageITSolutions/phalcon-exception-handler/releases)
+[![Total Downloads](https://img.shields.io/packagist/dt/sageit/phalcon-exception-handler.svg?style=flat-square)](https://packagist.org/packages/sageit/phalcon-exception-handler)
+[![Software License](https://img.shields.io/packagist/l/sageit/phalcon-exception-handler.svg?style=flat-square)](LICENSE)
+  
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -6,10 +10,6 @@
   </a>
 
   <h1 align="center">Phalcon Exception-Handler</h1>
-  
-  [![Latest Version](https://img.shields.io/github/release/SageITSolutions/phalcon-exception-handler.svg?style=flat-square)](https://github.com/SageITSolutions/phalcon-exception-handler/releases)
-  [![Total Downloads](https://img.shields.io/packagist/dt/sageit/phalcon-exception-handler.svg?style=flat-square)](https://packagist.org/packages/sageit/phalcon-exception-handler)
-  [![Software License](https://img.shields.io/packagist/l/sageit/phalcon-exception-handler.svg?style=flat-square)](LICENSE)
 
   <p align="center">
     Adds Preset throwable exceptions along with a built in handler with included logging.
@@ -23,8 +23,6 @@
     <a href="/issues">Request Feature</a>
   </p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
