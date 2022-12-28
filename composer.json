@@ -1,5 +1,5 @@
 {
-  "name": "sageit/phalcon-micro-annotations",
+  "name": "sageit/phalcon-exception-handler",
   "description": "Sage IT Component for Phalcon - Annotations Parser for annotation routes",
   "keywords": [
     "framework",
@@ -14,8 +14,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/SageITSolutions/phalcon-micro-annotations/issues",
-    "source": "https://github.com/SageITSolutions/phalcon-micro-annotations",
+    "issues": "https://github.com/SageITSolutions/phalcon-exception-handler/issues",
+    "source": "https://github.com/SageITSolutions/phalcon-exception-handler",
     "forum": "https://forum.phalconphp.com/",
     "docs": "https://docs.phalconphp.com/",
     "irc": "irc://irc.freenode.org/phalconphp",
@@ -32,12 +32,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Phalcon\\Mvc\\Router\\Annotations\\": "Phalcon/Mvc/Router/Annotations"
+      "Phalcon\\Exception\\": "Phalcon/Exception"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Phalcon\\Mvc\\Router\\Annotations\\": "Phalcon/Mvc/Router/Annotations"
+      "Phalcon\\Exception\\": "Phalcon/Exception"
     }
   }
 }
