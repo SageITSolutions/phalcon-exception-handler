@@ -1,28 +1,26 @@
-[![Latest Version](https://img.shields.io/github/release/SageITSolutions/phalcon-exception-handler.svg?style=flat-square)](https://github.com/SageITSolutions/phalcon-exception-handler/releases)
-[![Total Downloads](https://img.shields.io/packagist/dt/sageit/phalcon-exception-handler.svg?style=flat-square)](https://packagist.org/packages/sageit/phalcon-exception-handler)
-[![Software License](https://img.shields.io/packagist/l/sageit/phalcon-exception-handler.svg?style=flat-square)](LICENSE)
-  
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="#">
+<div align="center">
+  <!-- PROJECT LOGO -->
+  <a href="https://github.com/SageITSolutions/phalcon-exception-handler">
     <img src=".readme/logo.png" alt="Logo" width="445" height="120">
   </a>
 
-  <h1 align="center">Phalcon Exception-Handler</h1>
+  <h1 align="center">Phalcon Micro-Annotation</h1>
 
-  <p align="center">
+  [![Latest Stable Version](http://poser.pugx.org/sageit/phalcon-exception-handler/v?style=plastic)](https://packagist.org/packages/sageit/phalcon-exception-handler) 
+  [![Total Downloads](http://poser.pugx.org/sageit/phalcon-exception-handler/downloads?style=plastic)](https://packagist.org/packages/sageit/phalcon-exception-handler) 
+  [![License](http://poser.pugx.org/sageit/phalcon-exception-handler/license?style=plastic)](https://packagist.org/packages/sageit/phalcon-exception-handler)
+  [![PHP Version Require](http://poser.pugx.org/sageit/phalcon-exception-handler/require/php?style=plastic)](https://packagist.org/packages/sageit/phalcon-exception-handler)
+  [![Phalcon Version](https://img.shields.io/packagist/dependency-v/sageit/phalcon-exception-handler/ext-phalcon?label=Phalcon&logo=Phalcon%20Version&style=plastic)](https://packagist.org/packages/sageit/phalcon-exception-handler)
+
+  <p>
     Adds Preset throwable exceptions along with a built in handler with included logging.
-    <br />
-    <a href="#"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    ·
-    <a href="/issues">Report Bug</a>
-    ·
-    <a href="/issues">Request Feature</a>
   </p>
-</p>
+
+  **[Explore the docs »](https://github.com/SageITSolutions/phalcon-exception-handler)**
+
+  **[Report Bug](https://github.com/SageITSolutions/phalcon-exception-handler/issues)** ·
+  **[Request Feature](https://github.com/SageITSolutions/phalcon-exception-handler/issues)**
+</div>
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
