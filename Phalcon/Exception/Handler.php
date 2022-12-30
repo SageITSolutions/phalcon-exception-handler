@@ -51,7 +51,7 @@ class Handler extends \Phalcon\Di\Injectable
     public static function convertException(&$exception)
     {
         if (!is_subclass_of($exception, Exception::class)) {
-            $exception = UnkownException::cast($exception);
+            $exception = UnknownException::cast($exception);
         }
     }
 }
