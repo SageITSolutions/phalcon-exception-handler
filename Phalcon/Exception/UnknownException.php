@@ -1,52 +1,26 @@
 <?php
 namespace Phalcon\Exception;
 
-abstract class Exception extends \Exception implements \Throwable
+class UnknownException extends Exception
 {
-    protected const ERROR_MESSAGE = 'Unknown error occurred';
-    protected const ERROR_CODE = 500;
     protected const LOG_MESSAGE = null;
-    protected const LOG_LEVEL = 'debug';
-    protected $logdisplay;
+    protected const LOG_LEVEL = 'error';
 
-    public function __construct(...$args)
+    public function __construct($message, $code, $class = null)
     {
-        if (get_class($this) === UnknownException::class) {
-            $log = $args[0];
-            $this->logdisplay = $args[0];
-            parent::__construct($args[0], $args[1]);
-        } else {
-            $log = static::LOG_MESSAGE ?? static::ERROR_MESSAGE;
-            $this->logdisplay = ($args && is_array($args)) ? sprintf($log, ...$args) : $log;
-            parent::__construct(static::message(...$args), static::code());
+        if ($class) {
+            $message .= sprintf(" [instanceof: '%s']", $class);
         }
+        parent::__construct($message, $code);
     }
 
-    public function logDetails()
+    public static function cast($exception)
     {
-        return (object) [
-            'level' => static::LOG_LEVEL,
-            'message' => $this->logdisplay
-        ];
-    }
-
-    public function errorDetails()
-    {
-        return [
-            'code' => $this->getCode(),
-            'status' => 'error',
-            'message' => $this->getMessage()
-        ];
-    }
-
-    public static function message(...$args)
-    {
-        $message = ($args && is_array($args)) ? sprintf(static::ERROR_MESSAGE, ...$args) : static::ERROR_MESSAGE;
-        return $message;
-    }
-
-    public static function code()
-    {
-        return static::ERROR_CODE;
+        $code = $exception->getCode() ?? 500;
+        $message = $exception->getMessage() ?? "Error Obtaining Message";
+        if (!$code || $code == 0)
+            $code = 500;
+        $class = get_class($exception) ?? "";
+        return new self($message, $code, $class);
     }
 }
