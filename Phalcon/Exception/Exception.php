@@ -14,11 +14,11 @@ abstract class Exception extends \Exception implements \Throwable
         if (get_class($this) === UnknownException::class) {
             $log = $args[0];
             $this->logdisplay = $args[0];
-            throw new \Exception($args[0], $args[1]);
+            parent::__construct($args[0], $args[1]);
         } else {
             $log = static::LOG_MESSAGE ?? static::ERROR_MESSAGE;
             $this->logdisplay = ($args && is_array($args)) ? sprintf($log, ...$args) : $log;
-            throw new \Exception(static::message(...$args), static::code());
+            parent::__construct(static::message(...$args), static::code());
         }
     }
 
