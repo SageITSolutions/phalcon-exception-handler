@@ -6,7 +6,8 @@ class Handler extends \Phalcon\Di\Injectable
     protected $displayClass;
     public function __construct(bool $setGlobal = true, string $displayClass = 'Error')
     {
-        if($setGlobal) @set_exception_handler(array($this, 'thrown'));
+        if ($setGlobal)
+            @set_exception_handler(array($this, 'thrown'));
         $this->setDisplay($displayClass);
     }
 
@@ -16,20 +17,21 @@ class Handler extends \Phalcon\Di\Injectable
         $this->display($exception);
     }
 
-    public function setDisplay(string $displayClass){
+    public function setDisplay(string $displayClass)
+    {
         $this->displayClass = $displayClass;
     }
 
     public function display($exception, $displayClass = NULL)
     {
-        if(isset($displayClass)) $this->setDisplay($displayClass);
+        if (isset($displayClass))
+            $this->setDisplay($displayClass);
 
         self::convertException($exception);
         if ($this->flash) {
             $this->flash->$displayClass($exception->getMessage());
-        }
-        else {
-            echo sprintf("Exception encountered: '%s'",$exception->getMessage());
+        } else {
+            echo sprintf("Exception encountered: '%s'", $exception->getMessage());
         }
     }
 
@@ -37,13 +39,14 @@ class Handler extends \Phalcon\Di\Injectable
     {
         self::convertException($exception);
         $logdetail = $exception->logDetails();
-        
+
         if ($this->logger && $logdetail->level && $logdetail->level != '') {
             $this->logger->{$logdetail->level}($logdetail->message);
         }
     }
 
-    public function getJSON($exception){
+    public function getJSON($exception)
+    {
         $this->log($exception);
         return $exception->errorDetails();
     }
